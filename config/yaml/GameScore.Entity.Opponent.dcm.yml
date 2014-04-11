@@ -1,0 +1,17 @@
+GameScore\Entity\Opponent:
+  type: entity
+  table: opponent
+  fields:
+    opponent_id:
+      id: true
+      type: integer
+      generator:
+        strategy: AUTO
+    name:
+      type: string
+      length: 255
+      nullable: false
+  oneToMany:
+    gameScore:
+      targetEntity: GameScore\Entity\GameScore
+      mappedBy: opponent

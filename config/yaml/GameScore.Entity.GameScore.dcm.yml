@@ -1,0 +1,30 @@
+GameScore\Entity\GameScore:
+  type: entity
+  table: game_score
+  fields:
+    opponent_id:
+      id: true
+      type: integer
+      associationKey: true
+    game_id:
+      id: true
+      type: integer
+      associationKey: true
+    score:
+      type: smallint
+      nullable: false
+  manyToOne:
+    opponent:
+      targetEntity: GameScore\Entity\Opponent
+      inversedBy: gameScore
+      joinColumns:
+        opponent_id:
+          referencedColumnName: opponent_id
+          nullable: false
+    game:
+      targetEntity: GameScore\Entity\Game
+      inversedBy: gameScore
+      joinColumns:
+        game_id:
+          referencedColumnName: game_id
+          nullable: false

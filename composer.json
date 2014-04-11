@@ -1,0 +1,37 @@
+{
+    "name": "denisura/game-score",
+    "description": "CLI tool to keep track of scores for any game",
+    "type": "project",
+    "license": "MIT",
+    "config": {
+        "process-timeout": 900
+    },
+    "keywords": [
+        "doctrine"
+    ],
+    "homepage": "http://dionysus.uraganov.net/",
+    "support": {
+        "email": "github@uraganov.net",
+        "source": "https://github.com/denisura/game-score",
+        "issues": "https://github.com/denisura/game-score/issues"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "doctrine/orm": "2.4.*",
+        "symfony/yaml": "2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "phpunit/dbunit": ">=1.2",
+        "pdepend/pdepend": "*",
+        "phploc/phploc": "*",
+        "phpmd/phpmd": "*",
+        "squizlabs/php_codesniffer": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
